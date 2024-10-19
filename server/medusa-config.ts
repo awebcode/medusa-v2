@@ -3,7 +3,7 @@ import { plugins } from "./config/plugins";
 loadEnv(process.env.NODE_ENV || "development", process.cwd());
 
 module.exports = defineConfig({
-  modules: [
+  // modules: [
     // {
     //   resolve: "@medusajs/medusa/payment",
     //   options: {
@@ -86,7 +86,7 @@ module.exports = defineConfig({
     //     ],
     //   },
     // },
-  ],
+  // ],
 
   // plugins,
 
