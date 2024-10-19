@@ -1,11 +1,11 @@
-import { loadEnv, defineConfig } from "@medusajs/framework/utils";
+import { loadEnv, defineConfig, Modules } from "@medusajs/framework/utils";
 import { plugins } from "./config/plugins";
 loadEnv(process.env.NODE_ENV || "development", process.cwd());
 
 module.exports = defineConfig({
-  modules: [
-    {
-      resolve: "@medusajs/medusa/payment",
+  modules: {
+    [Modules.PAYMENT]: {
+      resolve: "@medusajs/payment",
       options: {
         providers: [
           {
@@ -15,7 +15,7 @@ module.exports = defineConfig({
               apiKey: process.env.STRIPE_API_KEY,
             },
           },
-        ], 
+        ],
       },
     },
     // {
@@ -86,7 +86,7 @@ module.exports = defineConfig({
     //     ],
     //   },
     // },
-  ],
+  },
 
   // plugins,
 

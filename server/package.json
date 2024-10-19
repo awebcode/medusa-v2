@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "build": "medusa build",
-    "build:prod": "npx medusa db:migrate &&medusa build",
+    "build:prod": "medusa build",
     "seed": "medusa exec ./src/scripts/seed.ts",
     "start": "medusa start",
     "dev": "medusa develop",
