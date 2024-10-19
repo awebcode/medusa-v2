@@ -4,20 +4,20 @@ loadEnv(process.env.NODE_ENV || "development", process.cwd());
 
 module.exports = defineConfig({
   modules: {
-    [Modules.PAYMENT]: {
-      resolve: "@medusajs/payment",
-      options: {
-        providers: [
-          {
-            resolve: "@medusajs/medusa/payment-stripe",
-            id: "stripe",
-            options: {
-              apiKey: process.env.STRIPE_API_KEY,
-            },
-          },
-        ],
-      },
-    },
+    // [Modules.PAYMENT]: {
+    //   resolve: "@medusajs/payment",
+    //   options: {
+    //     providers: [
+    //       {
+    //         resolve: "@medusajs/medusa/payment-stripe",
+    //         id: "stripe",
+    //         options: {
+    //           apiKey: process.env.STRIPE_API_KEY,
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
     // {
     //   resolve: "@medusajs/medusa/file",
     //   options: {
