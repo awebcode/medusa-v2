@@ -3,21 +3,21 @@ import { plugins } from "./config/plugins";
 loadEnv(process.env.NODE_ENV || "development", process.cwd());
 
 module.exports = defineConfig({
-  // modules: [
-    // {
-    //   resolve: "@medusajs/medusa/payment",
-    //   options: {
-    //     providers: [
-    //       {
-    //         resolve: "@medusajs/medusa/payment-stripe",
-    //         id: "stripe",
-    //         options: {
-    //           apiKey: process.env.STRIPE_API_KEY,
-    //         },
-    //       },
-    //     ],
-    //   },
-    // },
+  modules: [
+    {
+      resolve: "@medusajs/medusa/payment",
+      options: {
+        providers: [
+          {
+            resolve: "@medusajs/medusa/payment-stripe",
+            id: "stripe",
+            options: {
+              apiKey: process.env.STRIPE_API_KEY,
+            },
+          },
+        ], 
+      },
+    },
     // {
     //   resolve: "@medusajs/medusa/file",
     //   options: {
@@ -86,7 +86,7 @@ module.exports = defineConfig({
     //     ],
     //   },
     // },
-  // ],
+  ],
 
   // plugins,
 
